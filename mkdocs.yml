@@ -3,8 +3,8 @@ site_name: NJU Astronomy Survival Advice
 theme:
   name: material
   language: zh
-  logo: \assets\logo.png
-  favicon: \assets\logo.ico
+  logo: assets/logo.png
+  favicon: assets/logo.ico
   features:
     - navigation.instant        
     - navigation.tabs            
@@ -14,7 +14,7 @@ theme:
     - scheme: default
       primary: purple
       accent: indigo
-      
+
 nav:
   - 首页: index.md
   - 目录: contents.md
@@ -96,6 +96,6 @@ nav:
       - 大三下: appendix/courses/3_2_semester.md
       - 大四上: appendix/courses/4_1_semester.md
       - 大四下: appendix/courses/4_2_semester.md
-  - 作者: author.md
+  - 作者: authors.md
 
 
