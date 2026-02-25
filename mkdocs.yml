@@ -1,0 +1,101 @@
+site_name: NJU Astronomy Survival Advice
+
+theme:
+  name: material
+  language: zh
+  logo: \assets\logo.png
+  favicon: \assets\logo.ico
+  features:
+    - navigation.instant        
+    - navigation.tabs            
+    - toc.integrate              
+    - search.suggest  
+  palette:
+    - scheme: default
+      primary: purple
+      accent: indigo
+      
+nav:
+  - 首页: index.md
+  - 目录: contents.md
+  - 欢迎: 
+    - 欢迎来到天空院: freshman/welcome.md
+    - 自我驱动: freshman/self_driven.md
+    - 什么是你真正想要的？: freshman/motivation.md
+    - 兴趣之外：天文作为职业的另一面: freshman/career_reality.md
+  - 专业分流&科研兴趣:
+    - 专业方向: choice/fields.md
+    - 研究兴趣: choice/research_interest.md
+  - 课程学习:
+    - 绩点有什么用？: academics/gpa_goals.md
+    - 绩点焦虑: academics/gpa_anxiety.md
+    - 课程选择: academics/course_selection.md
+    - 课程学习方法: academics/study_methods.md
+    - 考前复习: academics/exam_preparation.md
+    - 如何上课？: academics/attending_classes.md
+  - 本科生科研:
+    - 本科生科研意味着什么: research_undergrad/undergrad_research_meaning.md
+    - 本科生科研的“好”成果？: research_undergrad/goals.md
+    - 本科生科研项目: research_undergrad/projects.md
+    - 导师的重要性: research_undergrad/supervisor.md
+    - 从入门到推进：本科生科研如何上手:
+      - 合理运用AI: research_undergrad/skills/methods_ai.md
+      - 论文阅读: research_undergrad/skills/literature_reading.md
+      - 快速入门技巧: research_undergrad/skills/fast_handle.md
+      - 团队合作: research_undergrad/skills/collaboration.md
+  - 研究生申请:
+    - 硕士生与博士生？: pathway/why_grad.md
+    - 保研:
+      - 为了保研你需要准备什么?: pathway/domestic_grad/by_recommended/prepare.md
+      - 夏令营（预推免）:
+        - 夏令营（预推免）是什么？: pathway/domestic_grad/by_recommended/what_is_summer_camp.md
+        - 如何准备一场夏令营（预推免）？: pathway/domestic_grad/by_recommended/prepare_summer_camp.md
+        - 不同夏令营（预推免）的侧重点: 
+          - 南京大学: pathway/domestic_grad/by_recommended/summer_camp_focus/nju.md
+          - 中国科学技术大学: pathway/domestic_grad/by_recommended/summer_camp_focus/ustc.md
+          - 北京大学: pathway/domestic_grad/by_recommended/summer_camp_focus/pku.md
+          - 清华大学: pathway/domestic_grad/by_recommended/summer_camp_focus/tsinghua.md
+          - 上海交通大学: pathway/domestic_grad/by_recommended/summer_camp_focus/sjtu.md
+          - 国家天文台: pathway/domestic_grad/by_recommended/summer_camp_focus/cas.md
+          - 其他院校: pathway/domestic_grad/by_recommended/summer_camp_focus/other_camps.md
+    - 考研:
+      - 考研的准备: pathway/domestic_grad/by_exam/prepare_kaoyan.md
+      - 考研的流程: pathway/domestic_grad/by_exam/process_kaoyan.md
+      - 其他: pathway/domestic_grad/by_exam/others_kaoyan.md
+    - 出国:
+      - 常见的出国路径概览: pathway/abroad/abroad_overview.md
+      - 为什么出国？: pathway/abroad/why_abroad.md
+      - 天文方向往年出国情况: pathway/abroad/abroad_past.md
+      - 出国申请流程: pathway/abroad/abroad_application.md
+      - 各个国家的出国情况: pathway/abroad/abroad_countries.md
+      - 出国的隐性成本: pathway/abroad/abroad_cost.md
+  - 本科生交换: 
+    - 出国交流项目介绍: abroad_exchange/exchange_intro.md
+    - 交流项目概览: 
+      - 学院项目: abroad_exchange/college_project.md
+      - 个人（导师）项目: abroad_exchange/personal_project.md
+      - 郑钢海外奖学金项目: abroad_exchange/zhenggang_project.md
+  - 学生工作:
+    - 学生工作是什么？: student_affairs/why_affairs.md
+    - 天空院团学联: student_affairs/student_union.md
+    - 天空院本科生团支部: student_affairs/youth_league_committee.md
+    - 天协: student_affairs/astronomy_association.md
+  - 天文之外: 
+    - 后来那些不做天文的人都去哪了: beyond_astro/leaving_astro.md
+    - 生活在南京: beyond_astro/living_nanjing.md
+    - 大学生活的其他方面: beyond_astro/others.md
+  - 附录:
+    - 课题组概览: appendix/group.md
+    - 参考书目: appendix/references.md
+    - 课程资料: 
+      - 大一上: appendix/courses/1_1_semester.md
+      - 大一下: appendix/courses/1_2_semester.md
+      - 大二上: appendix/courses/2_1_semester.md
+      - 大二下: appendix/courses/2_2_semester.md
+      - 大三上: appendix/courses/3_1_semester.md
+      - 大三下: appendix/courses/3_2_semester.md
+      - 大四上: appendix/courses/4_1_semester.md
+      - 大四下: appendix/courses/4_2_semester.md
+  - 作者: author.md
+
+
