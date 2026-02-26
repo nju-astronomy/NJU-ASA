@@ -1,6 +1,6 @@
 # Welcome！
 
-## 这里是南京大学天空院生存手册 (NJU astronomy suivival advice，NASA)!
+这里是南京大学天空院生存手册 (NJU astronomy survival advice，NASA)!
 
 ## 序
 
