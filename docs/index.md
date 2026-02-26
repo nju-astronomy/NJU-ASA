@@ -17,7 +17,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/nju-astronomy/NJU-ASA.svg?style=flat)
 
 - 仓库地址：<https://github.com/nju-astronomy/NJU-ASA>  
-- 在线阅读：<https://nju-astronomy.github.io/NJU-ASA/>
+- 在线网站：<https://nju-astronomy.github.io/NJU-ASA/>
 
 ---
 
