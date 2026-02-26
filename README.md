@@ -3,7 +3,7 @@
 欢迎！这里是南京大学天文与空间科学学院本科生的非官方生存手册 NJU Astronomy Survival Advice（NJU-ASA）。
 本项目受各高校课程/生存指南类项目 ([上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual)，[清华大学相关项目](https://rekcarc-tsc-uht.readthedocs.io/en/latest/README.html)等) 启发，并在结构编排上有所借鉴。
 
-我们希望为天空院的同学提供一份相对系统、持续更新的参考手册，帮助大家在学业、科研与生活中获取更多信息。本项目由天文与空间科学学院2022级本科生发起，感谢对本项目贡献的同学（参见[作者](authors.md)）以及屏幕前的你！
+我们希望为天空院的同学提供一份相对系统、持续更新的参考手册，帮助大家在学业、科研与生活中获取更多信息。本项目由天文与空间科学学院2022级本科生发起，感谢对本项目贡献的同学（参见`authors.md`）以及屏幕前的你！
 
 ![GitHub watchers](https://img.shields.io/github/watchers/nju-astronomy/NJU-ASA.svg?style=flat)
 ![GitHub stars](https://img.shields.io/github/stars/nju-astronomy/NJU-ASA.svg?style=flat)
@@ -78,7 +78,7 @@
 4. 上传完成后提交
 
 3、提交 Pull Request，**PR标题请注明署名方式**：
-- 匿名：自拟昵称，并标注年级与专业/方向（例: 2024级_天体生物学方向_匿名」），如果你想的话在[作者页面](../authors.md)添加你的联系方式。
+- 匿名：自拟昵称，并标注年级与专业/方向（例: 2024级_天体生物学方向_匿名」），如果你想的话在`authors.md`添加你的联系方式。
 - 实名：真实姓名，附年级与专业/方向（例：张三_2024级_宇宙社会学方向」）
 
 ### 方法二
