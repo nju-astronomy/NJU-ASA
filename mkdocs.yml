@@ -17,8 +17,9 @@ theme:
 
 nav:
   - 首页: index.md
+  - 序: preface.md
   - 目录: contents.md
-  - 欢迎: 
+  - 新生指南: 
     - 欢迎来到天空院: freshman/welcome.md
     - 自我驱动: freshman/self_driven.md
     - 什么是你真正想要的？: freshman/motivation.md
@@ -96,6 +97,7 @@ nav:
       - 大三下: appendix/courses/3_2_semester.md
       - 大四上: appendix/courses/4_1_semester.md
       - 大四下: appendix/courses/4_2_semester.md
+    - 贡献方法: appendix/contribution.md
   - 作者: authors.md
 
 
