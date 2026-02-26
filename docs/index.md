@@ -1,6 +1,10 @@
 # 南京大学天文与空间科学学院生存手册（NJU-ASA）
 
-> **"We build the world we want to live in."**
+<div style="text-align: center; font-size: 1.2em; font-weight: bold; margin: 2em 0; line-height: 1.8;">
+
+"We build the world we want to live in."
+
+</div>
 
 欢迎！这里是南京大学天文与空间科学学院本科生的非官方生存手册 NJU Astronomy Survival Advice（NJU-ASA）。
 本项目受各高校课程/生存指南类项目 ([上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual)，[清华大学相关项目](https://rekcarc-tsc-uht.readthedocs.io/en/latest/README.html)等) 启发，并在结构编排上有所借鉴。

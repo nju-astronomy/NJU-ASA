@@ -1,10 +1,14 @@
 # 贡献方法
 
-## 贡献方法
+**感谢你的贡献！** 
+
+## 贡献方式
 
 本项目使用标准 Markdown 语法
 
-### 方法一. 提交 Pull Request（推荐）
+### 方法一
+
+提交 Pull Request（推荐）
 
 1、Fork（页面右上角）本仓库
 
@@ -43,7 +47,9 @@
 - 匿名：自拟昵称，并标注年级与专业/方向（例: 2024级_天体生物学方向_匿名」），如果你想的话在[作者页面](../authors.md)添加你的联系方式。
 - 实名：真实姓名，附年级与专业/方向（例：张三_2024级_宇宙社会学方向」）
 
-### 方法二. 在 [GitHub Issues](https://github.com/nju-astronomy/NJU-ASA/issues) 上提交文件和相关内容，有维护者后续添加。
+### 方法二
+
+在 [GitHub Issues](https://github.com/nju-astronomy/NJU-ASA/issues) 上提交文件和相关内容，有维护者后续添加。
 
 ---
 ## 内容组织规范
@@ -100,6 +106,4 @@ docs/appendix/courses/courses_files/
 > - 避免提交单个大于 100MB 的文件（仓库未启用 Git LFS），大文件请用网盘 + 链接
 > - **请勿手动修改 `gh-pages` 分支**，部署由 CI 自动维护
 > - 不要运行 `mkdocs gh-deploy`，这会干扰自动部署流程
----
 
-**感谢你的贡献！** 
