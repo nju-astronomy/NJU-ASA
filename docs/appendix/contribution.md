@@ -58,18 +58,111 @@
 
 ```
 docs/
-├── freshman/           # 新生指南
-├── choice/             # 专业分流 & 科研兴趣
-├── academics/          # 课程学习
-├── research_undergrad/ # 本科生科研
-├── pathway/            # 研究生申请
-├── abroad_exchange/    # 本科生交换
-├── student_affairs/    # 学生工作
-├── beyond_astro/       # 天文之外
-├── appendix/           # 附录
-│   └── courses/
-│       └── courses_files/  # 课程资料统一存放处
-└── ...
+├── index.md                          # 首页
+├── preface.md                        # 序
+├── authors.md                        # 作者
+├── contents.md                       # 目录
+├── assets/                           # 资源文件
+│
+├── freshman/                         # 新生指南
+│   ├── welcome.md                    # 欢迎来到天空院
+│   ├── self_driven.md                # 自我驱动
+│   ├── motivation.md                 # 什么是你真正想要的？
+│   └── career_reality.md             # 兴趣之外：天文作为职业的另一面
+│
+├── choice/                           # 专业分流 & 科研兴趣
+│   ├── fields.md                     # 专业方向
+│   └── research_interest.md          # 研究兴趣
+│
+├── academics/                        # 课程学习
+│   ├── gpa_goals.md                  # 绩点有什么用？
+│   ├── gpa_anxiety.md                # 绩点焦虑
+│   ├── course_selection.md           # 课程选择
+│   ├── study_methods.md              # 课程学习方法
+│   ├── exam_preparation.md           # 考前复习
+│   └── attending_classes.md          # 如何上课？
+│
+├── research_undergrad/               # 本科生科研
+│   ├── undergrad_research_meaning.md # 本科生科研意味着什么
+│   ├── goals.md                      # 本科生科研的"好"成果？
+│   ├── projects.md                   # 本科生科研项目
+│   ├── supervisor.md                 # 导师的重要性
+│   └── skills/                       # 从入门到推进：本科生科研如何上手
+│       ├── methods_ai.md             # 合理运用AI
+│       ├── literature_reading.md     # 论文阅读
+│       ├── fast_handle.md            # 快速入门技巧
+│       └── collaboration.md          # 团队合作
+│
+├── pathway/                          # 研究生申请
+│   ├── why_grad.md                   # 硕士生与博士生？
+│   ├── domestic_grad/                # 国内申请
+│   │   ├── by_recommended/           # 保研
+│   │   │   ├── prepare.md            # 为了保研你需要准备什么？
+│   │   │   ├── what_is_summer_camp.md # 夏令营（预推免）是什么？
+│   │   │   ├── prepare_summer_camp.md # 如何准备一场夏令营（预推免）？
+│   │   │   └── summer_camp_focus/    # 不同夏令营（预推免）的侧重点
+│   │   │       ├── nju.md            # 南京大学
+│   │   │       ├── ustc.md           # 中国科学技术大学
+│   │   │       ├── pku.md            # 北京大学
+│   │   │       ├── tsinghua.md       # 清华大学
+│   │   │       ├── sjtu.md           # 上海交通大学
+│   │   │       ├── cas.md            # 国家天文台
+│   │   │       └── other_camps.md    # 其他院校
+│   │   └── by_exam/                  # 考研
+│   │       ├── prepare_kaoyan.md     # 考研的准备
+│   │       ├── process_kaoyan.md     # 考研的流程
+│   │       └── others_kaoyan.md      # 其他
+│   └── abroad/                       # 出国
+│       ├── abroad_overview.md        # 常见的出国路径概览
+│       ├── why_abroad.md             # 为什么出国？
+│       ├── abroad_past.md            # 天文方向往年出国情况
+│       ├── abroad_application.md     # 出国申请流程
+│       ├── abroad_countries.md       # 各个国家的出国情况
+│       └── abroad_cost.md            # 出国的隐性成本
+│
+├── abroad_exchange/                  # 本科生交换
+│   ├── exchange_intro.md             # 出国交流项目介绍
+│   ├── college_project.md            # 学院项目
+│   ├── personal_project.md           # 个人（导师）项目
+│   └── zhenggang_project.md          # 郑钢海外奖学金项目
+│
+├── student_affairs/                  # 学生工作
+│   ├── why_affairs.md                # 学生工作是什么？
+│   ├── student_union.md              # 天空院团学联
+│   ├── youth_league_committee.md     # 天空院本科生团支部
+│   └── astronomy_association.md      # 天协
+│
+├── beyond_astro/                     # 天文之外
+│   ├── leaving_astro.md              # 后来那些不做天文的人都去哪了？
+│   ├── living_nanjing.md             # 生活在南京
+│   └── others.md                     # 大学生活的其他方面
+│
+└── appendix/                         # 附录
+    ├── group.md                      # 课题组概览
+    ├── references.md                 # 参考书目
+    ├── contribution.md               # 贡献方法
+    └── courses/                      # 课程资料
+        ├── 1_1_semester.md           # 大一上
+        ├── 1_2_semester.md           # 大一下
+        ├── 2_1_semester.md           # 大二上
+        ├── 2_2_semester.md           # 大二下
+        ├── 3_1_semester.md           # 大三上
+        ├── 3_2_semester.md           # 大三下
+        ├── 4_1_semester.md           # 大四上
+        ├── 4_2_semester.md           # 大四下
+        └── courses_files/            # 课程资料统一存放处
+            └── [按学期和课程组织]
+```
+
+### 回答上传示例
+
+若为“绩点有什么用？”小节分享你的回答，找到`docs/academics/gpa_goals.md`文件中记录说明：
+```markdown
+
+你的回答你的回答你的回答你的回答你的回答你的回答你的回答你的回答你的回答（你的名字（实名或者匿名），你的方向，你的年级
+
+--- #下划线分割
+
 ```
 
 ### 课程资料上传示例
@@ -91,8 +184,10 @@ docs/appendix/courses/courses_files/
 ```markdown
 ## 微积分
 
-- [2024年匿名笔记](courses_files/大一上/微积分/2024_匿名_笔记.pdf)（by 2024级_天文_匿名）
+- [2024年匿名笔记](courses_files/大一上/微积分/2024_匿名_笔记.pdf)
 - 简介：课程要点总结、复习重点等（可写可不写）...
+（你的名字（实名或者匿名），你的方向，你的年级）
+
 ```
 
 ---

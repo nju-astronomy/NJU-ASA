@@ -9,8 +9,8 @@
 - [什么是你真正想要的？](freshman/motivation.md)
 - [兴趣之外：天文作为职业的另一面](freshman/career_reality.md)
 ## 专业分流 & 科研兴趣
-- [专业方向](choice/fields.md)
-- [研究兴趣](choice/research_interest.md)
+- [如何选择专业方向](choice/fields.md)
+- [如何选择研究兴趣](choice/research_interest.md)
 ## 课程学习
 - [绩点有什么用？](academics/gpa_goals.md)
 - [绩点焦虑](academics/gpa_anxiety.md)
