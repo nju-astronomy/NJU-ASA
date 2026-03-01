@@ -90,13 +90,11 @@ nav:
     - 课题组概览: appendix/group.md
     - 参考书目: appendix/references.md
     - 贡献方法: appendix/contribution.md
-    - 课程资料: 
-      - 大一上: appendix/courses/1_1_semester.md
-      - 大一下: appendix/courses/1_2_semester.md
-      - 大二上: appendix/courses/2_1_semester.md
-      - 大二下: appendix/courses/2_2_semester.md
-      - 大三上: appendix/courses/3_1_semester.md
-      - 大三下: appendix/courses/3_2_semester.md
-      - 大四上: appendix/courses/4_1_semester.md
-      - 大四下: appendix/courses/4_2_semester.md
+    - 课程相关: 
+      - 大一: appendix/courses/1_semester.md
+      - 大二: appendix/courses/2_semester.md
+      - 大三: appendix/courses/3_semester.md
+      - 大四: appendix/courses/4_semester.md
+      - 暑期学校: appendix/courses/summer.md
+
 

@@ -142,16 +142,13 @@ docs/
     ├── references.md                 # 参考书目
     ├── contribution.md               # 贡献方法
     └── courses/                      # 课程资料
-        ├── 1_1_semester.md           # 大一上
-        ├── 1_2_semester.md           # 大一下
-        ├── 2_1_semester.md           # 大二上
-        ├── 2_2_semester.md           # 大二下
-        ├── 3_1_semester.md           # 大三上
-        ├── 3_2_semester.md           # 大三下
-        ├── 4_1_semester.md           # 大四上
-        ├── 4_2_semester.md           # 大四下
+        ├── 1_semester.md           # 大一
+        ├── 2_semester.md           # 大二
+        ├── 3_semester.md           # 大三
+        ├── 4_semester.md           # 大四
+        ├── summer.md           # 暑期学校
         └── courses_files/            # 课程资料统一存放处
-            └── [按学期和课程组织]
+            └── [按学期组织]
 ```
 
 ### 回答上传示例
@@ -171,20 +168,17 @@ docs/
 
 ```
 docs/appendix/courses/courses_files/
-├── 大一上/
-│   ├── 微积分/
-│   │   ├── 2024_匿名_笔记.pdf
-│   │  
-│   ├── 线性代数/
+├── 大一/
+│   │   ├── 2024_匿名_微积分_笔记或试卷等资料.pdf
 │   └── ...
 ```
 
-在对应的 Markdown 文件（如 `docs/appendix/courses/1_1_semester.md`）中记录与说明：
+在对应的 Markdown 文件（如 `docs/appendix/courses/1_semester.md`）中记录与说明：
 
 ```markdown
 ## 微积分
 
-- [2024年匿名笔记](courses_files/大一上/微积分/2024_匿名_笔记.pdf)
+- [2024年匿名笔记](courses_files/大一/微积分/2024_匿名_微积分_笔记或试卷等资料.pdf)
 - 简介：课程要点总结、复习重点等（可写可不写）...
 （你的名字（实名或者匿名），你的方向，你的年级）
 
