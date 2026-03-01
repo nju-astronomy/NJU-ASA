@@ -3,6 +3,8 @@ site_name: NJU-ASA
 theme:
   name: material
   language: zh
+  font:
+    text: "STHeiti Light"
   logo: assets/logo.png
   favicon: assets/logo.ico
   features:
