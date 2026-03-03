@@ -4,6 +4,6 @@
 
 希望你能在天空院找到属于自己的节奏，在探索宇宙的同时，也慢慢认识自己，在这里书写一段真正属于你的故事。
 
-这篇《[在南京大学读天文是一种怎么样的体验》](https://www.xiaohongshu.com/discovery/item/690b59910000000003013a6d?app_platform=ios&app_version=9.19.4&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBJDgvDiZrUbvuJ4M6IsZ_cBVY3O8D7wFXBUGj8WKalYU=&author_share=1&xhsshare=WeixinSession&shareRedId=N0xHRDxGPUE2NzUyOTgwNjY0OTc4PUs7&apptime=1772078460&share_id=208461aa61b44b559d37656462f4cf48)的帖子相信每一个在南大学天文的你都会有所共鸣。（Malin，天体物理方向，2022级本科生）
+这篇《[在南京大学读天文是一种怎么样的体验》](https://www.xiaohongshu.com/discovery/item/690b59910000000003013a6d?app_platform=ios&app_version=9.19.4&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBJDgvDiZrUbvuJ4M6IsZ_cBVY3O8D7wFXBUGj8WKalYU=&author_share=1&xhsshare=WeixinSession&shareRedId=N0xHRDxGPUE2NzUyOTgwNjY0OTc4PUs7&apptime=1772078460&share_id=208461aa61b44b559d37656462f4cf48)的帖子相信每一个在南大学天文的你都会有所共鸣。（欧阳马霖，天体物理方向，2022级本科生）
 
 ---
