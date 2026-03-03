@@ -11,6 +11,7 @@
 
 我们希望为天空院的同学提供一份相对系统、持续更新的参考手册，帮助大家在学业、科研与生活中获取更多信息。本项目由天文与空间科学学院2022级本科生发起，感谢对本项目贡献的同学（参见[作者](authors.md)）以及屏幕前的你！
 
+![GitHub watchers](https://img.shields.io/github/watchers/nju-astronomy/NJU-ASA.svg?style=flat)
 ![GitHub stars](https://img.shields.io/github/stars/nju-astronomy/NJU-ASA.svg?style=flat)
 ![GitHub forks](https://img.shields.io/github/forks/nju-astronomy/NJU-ASA.svg?style=flat)
 ![GitHub repo size](https://img.shields.io/github/repo-size/nju-astronomy/NJU-ASA.svg?style=flat)
