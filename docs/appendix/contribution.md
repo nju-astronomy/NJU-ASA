@@ -143,7 +143,7 @@ docs/
 ├── beyond_astro/                     # 天文之外
 │   ├── leaving_astro.md              # 后来那些不做天文的人都去哪了？
 │   ├── living_nanjing.md             # 生活在南京
-│   └── others.md                     # 大学生活的其他方面
+│   └── living_nju.md                 # 生活在南大
 │
 └── appendix/                         # 附录
     ├── group.md                      # 课题组概览
