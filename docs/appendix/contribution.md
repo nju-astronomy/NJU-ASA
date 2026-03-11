@@ -141,7 +141,8 @@ docs/
 │   └── astronomy_association.md      # 天协
 │
 ├── beyond_astro/                     # 天文之外
-│   ├── leaving_astro.md              # 后来那些不做天文的人都去哪了？
+    ├── switching_major.md            # 转专业
+    ├── careers.md                    # 就业
 │   ├── living_nanjing.md             # 生活在南京
 │   └── living_nju.md                 # 生活在南大
 │

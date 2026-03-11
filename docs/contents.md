@@ -65,7 +65,8 @@
 - [天空院本科生团支部](student_affairs/youth_league_committee.md)
 - [天协](student_affairs/astronomy_association.md)
 ## 天文之外
-- [后来那些不做天文的人都去哪了？](beyond_astro/leaving_astro.md)
+- [转专业](beyond_astro/switching_major.md)
+- [就业](beyond_astro/careers.md)
 - [生活在南京](beyond_astro/living_nanjing.md)
 - [生活在南大](beyond_astro/living_nju.md)
 ## 附录
