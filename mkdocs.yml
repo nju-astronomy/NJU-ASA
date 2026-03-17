@@ -89,6 +89,7 @@ nav:
     - 就业: beyond_astro/careers.md
     - 生活在南京: beyond_astro/living_nanjing.md
     - 生活在南大: beyond_astro/living_nju.md
+  - 树洞: whatever.md
   - 附录:
     - 课题组概览: appendix/group.md
     - 参考书目: appendix/references.md
@@ -99,5 +100,8 @@ nav:
       - 大三: appendix/courses/3_semester.md
       - 大四: appendix/courses/4_semester.md
       - 暑期学校: appendix/courses/summer.md
+
+extra_javascript:
+  - assets/javascripts/repo_last_updated.js
 
 

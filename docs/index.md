@@ -18,6 +18,8 @@
 
 - 仓库地址：<https://github.com/nju-astronomy/NJU-ASA>  
 - 在线网站：<https://nju-astronomy.github.io/NJU-ASA/>
+- 最近更新：<span id="repo-last-updated">加载中...</span>
+
 
 ---
 
