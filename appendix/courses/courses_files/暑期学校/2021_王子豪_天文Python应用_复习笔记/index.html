@@ -1,0 +1,3965 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/logo.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>2021 王子豪 天文Python应用 复习笔记 - NJU-ASA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=STHeiti+Light:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"STHeiti Light";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#i-python" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../.." title="NJU-ASA" class="md-header__button md-logo" aria-label="NJU-ASA" data-md-component="logo">
+      
+  <img src="../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NJU-ASA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2021 王子豪 天文Python应用 复习笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../preface/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  序
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../authors/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  作者
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../contents/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  目录
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../freshman/welcome/" class="md-tabs__link">
+          
+  
+  
+  新生指南
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../choice/fields/" class="md-tabs__link">
+          
+  
+  
+  专业分流&科研兴趣
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../academics/gpa_goals/" class="md-tabs__link">
+          
+  
+  
+  课程学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../research_undergrad/undergrad_research_meaning/" class="md-tabs__link">
+          
+  
+  
+  本科生科研
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../pathway/why_grad/" class="md-tabs__link">
+          
+  
+  
+  研究生申请
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../abroad_exchange/exchange_intro/" class="md-tabs__link">
+          
+  
+  
+  本科生交换
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../student_affairs/why_affairs/" class="md-tabs__link">
+          
+  
+  
+  学生工作
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../beyond_astro/switching_major/" class="md-tabs__link">
+          
+  
+  
+  天文之外
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../group/" class="md-tabs__link">
+          
+  
+  
+  附录
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="NJU-ASA" class="md-nav__button md-logo" aria-label="NJU-ASA" data-md-component="logo">
+      
+  <img src="../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    NJU-ASA
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    序
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../authors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    作者
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../contents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    目录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    新生指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    新生指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../freshman/welcome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎来到天空院
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../freshman/self_driven/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自我驱动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../freshman/motivation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    什么是你真正想要的？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../freshman/career_reality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    兴趣之外：天文作为职业的另一面
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    专业分流&科研兴趣
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    专业分流&科研兴趣
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../choice/fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    如何选择专业方向
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../choice/research_interest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    研究兴趣
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程学习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程学习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../academics/gpa_goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    绩点有什么用？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../academics/gpa_anxiety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    绩点焦虑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../academics/course_selection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程选择
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../academics/study_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程学习方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../academics/exam_preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    考前复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../academics/attending_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    如何上课？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    本科生科研
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    本科生科研
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research_undergrad/undergrad_research_meaning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    本科生科研意味着什么
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research_undergrad/goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    本科生科研的“好”成果？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research_undergrad/projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    本科生科研项目
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research_undergrad/supervisor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    导师的重要性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    从入门到推进：本科生科研如何上手
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    从入门到推进：本科生科研如何上手
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research_undergrad/skills/methods_ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    合理运用AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research_undergrad/skills/literature_reading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文阅读
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research_undergrad/skills/fast_handle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门技巧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research_undergrad/skills/collaboration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    团队合作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    研究生申请
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    研究生申请
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/why_grad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硕士生与博士生？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    保研
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    保研
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_recommended/prepare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    为了保研你需要准备什么?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2_2" id="__nav_9_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    夏令营（预推免）
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    夏令营（预推免）
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_recommended/what_is_summer_camp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    夏令营（预推免）是什么？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_recommended/prepare_summer_camp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    如何准备一场夏令营（预推免）？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2_2_3" id="__nav_9_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不同夏令营（预推免）的侧重点
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_9_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不同夏令营（预推免）的侧重点
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_recommended/summer_camp_focus/nju/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    南京大学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_recommended/summer_camp_focus/ustc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国科学技术大学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_recommended/summer_camp_focus/pku/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    北京大学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_recommended/summer_camp_focus/tsinghua/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    清华大学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_recommended/summer_camp_focus/sjtu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    上海交通大学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_recommended/summer_camp_focus/cas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    国家天文台
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_recommended/summer_camp_focus/other_camps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他院校
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    考研
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    考研
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_exam/prepare_kaoyan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    考研的准备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_exam/process_kaoyan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    考研的流程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/domestic_grad/by_exam/others_kaoyan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    出国
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    出国
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/abroad/abroad_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常见的出国路径概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/abroad/why_abroad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    为什么出国？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/abroad/abroad_past/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    天文方向往年出国情况
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/abroad/abroad_application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    出国申请流程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/abroad/abroad_countries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    各个国家的出国情况
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../pathway/abroad/abroad_cost/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    出国的隐性成本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    本科生交换
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    本科生交换
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../abroad_exchange/exchange_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    出国交流项目介绍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    交流项目概览
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    交流项目概览
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../abroad_exchange/college_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学院项目
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../abroad_exchange/personal_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    个人（导师）项目
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../abroad_exchange/zhenggang_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    郑钢海外奖学金项目
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学生工作
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    学生工作
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../student_affairs/why_affairs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学生工作是什么？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../student_affairs/student_union/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    天空院团学联
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../student_affairs/youth_league_committee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    天空院本科生团支部
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../student_affairs/astronomy_association/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    天协
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    天文之外
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    天文之外
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../beyond_astro/switching_major/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    转专业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../beyond_astro/careers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    就业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../beyond_astro/living_nanjing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生活在南京
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../beyond_astro/living_nju/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生活在南大
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    附录
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../group/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课题组概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考书目
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contribution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    贡献方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_13_4" id="__nav_13_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程相关
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程相关
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1_semester/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2_semester/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3_semester/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大三
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4_semester/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大四
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../summer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    暑期学校
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>2021 王子豪 天文Python应用 复习笔记</h1>
+
+<h3 id="i-python">I. Python基础</h3>
+<p>​   <strong>1. 数据类型</strong></p>
+<p>Python中变量不需要声明；等号赋值</p>
+<pre><code class="language-python">### Booleans    True False
+
+### Numbers     int float fraction complex
+int(2.5)            # 取整数部分而非四舍五入
+# 数值运算
+11/2                    # python3浮点除法
+11//2                   # 取整
+11**2                   # 计算幂
+11%2                    # 求余数
+# 分数
+import fractions
+x=fractions.Fraction(1,3)
+# 三角函数
+import math
+math.pi
+math.sin(math.pi/2)
+### Python不支持无限精度
+
+### List
+list1=['abcd',777,2.23,'john',70.2]
+print(list1)            # 输出完整列表
+print(list1[0])     # 输出列表的第⼀个元素
+print(list1[1:3]) # 输出第⼆个⾄第三个的元素
+print(list1[2:])    # 输出从第三个开始⾄列表末尾的所有元素
+# 添加元素
+list1.apend(1)              # 在尾部添加一个新元素
+list1.extend([])            # 在尾部添加一个列表
+list1.insert(0,'0a')    # 在指定位置添加一个元素
+# 检索列表
+list.count(777)             # 返回某值出现次数
+'john' in list1             # 是否在列表中
+list1.index(777)            # 第一次出现位置
+# 删除元素
+del list1[1]                    # 删除指定位置元素
+list.remove('abcd')     # 删除某值第一次出现元素
+list.pop()                      # 删除最后一个
+list.pop(2)                     # 删除指定位置元素
+
+### Tuples：元组，相当于只读列表，操作与列表相同
+v=('a',2,True)
+(x,y,z)=v
+(a, b, c) = range(3)    # 构造一个整数序列（0，1，2）
+
+### Sets：集合，唯一值、无序集合
+set1={'abcd',789,2.23,'john',70.2}
+list1=['abcd',789,2.23,'john',70.2]
+# 基本操作
+a_set=set(list1)            # 从list1中构造集合a_set
+set1=set()
+set2={}
+# 修改集合
+set1.add(4)
+set1.update({2,10,20})      # 增加一个或多个集合或列表
+set1.discard(789)                   # 删除该单指
+set1.remove(70.2)                   # 同上
+set1.clear()                            # 清空
+# 集合运算
+set1 = {1, 3, 6, 10, 15, 21, 28, 36, 45}
+set2 = {1, 2, 3, 5, 6, 8, 9, 12, 18,45}
+set1.union(set2)                    # 并
+set1.intersection(set2)     # 交
+set1.difference(set2)       # 差，1有2无的元素
+set1.symmetric_difference(set2) # 1,2为全集的交补
+
+### Dictionaries：字典，键值对
+dict1={'name':'john','code':6666,'dept':'sales'}
+### Strings：字符串
+str1='Hello World!'
+</code></pre>
+<p>​   <strong>2. 运算符号</strong></p>
+<p>算术表达式</p>
+<pre><code class="language-python">a,b=10,20
+
+</code></pre>
+<p>​   <strong>3. 控制语句</strong></p>
+<pre><code class="language-python"># if条件语句
+num = 5
+if num == 3:
+  print('boss')
+elif num == 2:
+  print('user')
+elif num == 1:
+  print('worker')
+elif num &lt; 0:
+  print('error')
+else:
+  print('roadman')
+
+# while循环语句
+a, b = 0, 10
+while a&lt;b:
+  print(a)
+  a = a + 1
+
+# for循环语句
+sum = 0
+for x in [1,2,3,4]:
+  sum = sum + x
+  print(sum)
+sum
+fruits = ['banana', 'apple', 'mango']
+for index in range(len(fruits)):
+  print('Current fruit :', fruits[index])
+
+for index in range(len(L)):
+  print('Hello,',L[index],'!')
+</code></pre>
+<p>​   <strong>4. 正则表达式</strong></p>
+<p>正则表达式是一个特殊的字符序列，它能帮助你方便的检查一个字符串是否与某种模式匹配。</p>
+<pre><code class="language-Python">import re
+re.match(pattern,string,flags=0)
+re.match(pattern,string,flags=0)
+# pattern：匹配的正则表达式；string：要匹配的字符串；flags：控制
+# 匹配实例
+import re
+line=&quot;Cats are smarter than dogs&quot;
+matchObj = re.match( r'dogs', line, re.M|re.I)
+if matchObj:
+ print(&quot;match --&gt; matchObj.group() : &quot;,matchObj.group())
+else:
+ print(&quot;No match!!&quot;)
+matchObj = re.search( r'dogs', line, re.M|re.I)
+if matchObj:
+ print(&quot;search --&gt; matchObj.group() : &quot;,matchObj.group())
+else:
+ print(&quot;No match!!&quot;)
+
+# 改动实例：把老街道地址导入新系统
+s='100 NORTH MAIN ROAD'
+s.replace('ROAD','RD.')
+# 等价于：
+import re
+re.sub('ROAD$','RD.',s)
+</code></pre>
+<p>​   <strong>5. python中定义函数</strong></p>
+<pre><code class="language-python">### 基本格式
+def functionname(parameters):
+  function_suite
+  return
+### 函数定义
+def printme(str):
+  print(str)
+  return
+def printinfo( arg1, *vartuple):
+ print(&quot;输出： &quot;)
+ print(arg1)
+ for var in vartuple:
+        print(var)
+ return
+</code></pre>
+<h3 id="ii">II. 天文模块</h3>
+<p>天文方面利用Python进行数据处理可大致分为两类：</p>
+<ol>
+<li>图像处理：测出目标源总光子数</li>
+<li>光谱分析：得到精确的谱能量分布</li>
+</ol>
+<p><em>例如：以光学波段为例，raw数据帧减去本底、暗流，做平常改正</em></p>
+<p><strong>1. numpy</strong></p>
+<p>数学包：更加丰富的数学类型；数组表达和运算</p>
+<pre><code class="language-python">import numpy as np
+</code></pre>
+<p>数组基本运算</p>
+<pre><code class="language-python">### 构建一个二维数组
+ab = np.array(
+    (
+        (1,2,4),                ###第一行
+        (8,16,32),          ###第二行
+    )
+  dtype=np.int32            ###定义数据类型
+)
+### 特殊数组
+np.zeros(6)         ###零数组
+np.ones(6)          ###一数组
+np.ones_like(ab)                    ###维度与ab数组一致
+np.arange(3,124,8)          ###等差数列（ 初始，终止，间隔 ）
+np.linspace(4,124,8)            ###等差数列（ 初始，终止，n-1等分 ）
+
+### 数组统计描述
+np.sum(ab,axis=0)
+### 其他统计值 sum, min, max, mean, median,
+
+### 对象操作
+ab,np.rot90(ab)         ###旋转90度
+
+### 结构体数组
+sp = np.empty((10,),dtype=[('Wave',float),('Flux',float)])  ###10个（wave，flux）坐标
+sp['Wave']              ###访问‘wave’行
+sp[3]               ###访问第三行
+</code></pre>
+<p>曲线拟合</p>
+<pre><code class="language-python">np.polyfit
+</code></pre>
+<p>更多功能：numpy官网</p>
+<p><strong>2. scipy</strong></p>
+<p>科学计算包（一般只引用子包）</p>
+<pre><code class="language-python">from scipy import fft
+import scipy.fft
+</code></pre>
+<p><strong>3. matplotlib</strong></p>
+<p>绘图包</p>
+<pre><code class="language-python">import matplotlib.pylot as plt
+%matplotlib inline
+</code></pre>
+<p>绘图过程（对简单图形</p>
+<pre><code class="language-python">x=np.arange(-10,10,0.001)
+y=np.sin[x]
+plt.plot(x,y)
+plt.xlim(6,-4)
+plt.show()
+plt.savefig(&quot;aa.png&quot;)
+</code></pre>
+<p>或（对复杂图形）</p>
+<pre><code class="language-python">fig,ax = plt.subplot(1, 1, figsize=(12,8))
+ax.plot(x, y, &quot;r:&quot;)
+ax.set_xlim(6,-4)
+ax.set_ylabel(&quot;sin($F_X$)&quot;)
+</code></pre>
+<p>同时画图：</p>
+<pre><code class="language-python">fig,(ax1,ax2,ax3) = plt.subplots(1, 3, figsize=(12,8))
+ax1.plot(x, y, &quot;r:&quot;)
+ax2.plot(x, y, &quot;b*&quot;)
+ax3.plot(x, y, &quot;g--&quot;)
+# colour: w b r g m y c k
+# lineshape: - -- :
+# markers: * . o , ^ v &lt; &gt; + x s
+</code></pre>
+<pre><code class="language-python">fig = plt.figure(12,5)
+ax1 = fig.add_subplot(131)          ###一幅图被分为一行三列，此为第一个
+ax2 = fig.add_subplot(132)
+ax3 = fig.add_subplot(133)
+ax1.plot(x, y, &quot;g+&quot;)
+ax2.plot(x, y, &quot;r:&quot;)
+ax3.plot(x, y, &quot;b*&quot;)
+# 参考网站：astroplotlib.stsci.edu
+</code></pre>
+<p><strong>4. Pandas</strong></p>
+<p>数据处理包</p>
+<pre><code class="language-python">import pandas as pd
+import math
+import numpy as np
+</code></pre>
+<p>数据读取与处理：</p>
+<pre><code class="language-python">df = pd.read_csv('data/hip.csv',sep='|')
+df
+df.plot.scatter(x='RA', y='Dec', color='DarkBlue')
+df['RAh'] = df['RA']/ 15
+</code></pre>
+<h3 id="iii-python">III. Python实例：系外行星监测数据处理与测光</h3>
+<p>Data Reduction Steps</p>
+<ul>
+<li>Combining bias and flats</li>
+<li>Correction of bias and flats</li>
+<li>Image alignment  <em>图像校准</em></li>
+<li>Source detection and Photometry</li>
+<li>Differential photometry</li>
+</ul>
+<p>I. 导入fits文件，确认header与图片信息</p>
+<pre><code class="language-python">from astropy.io import fits
+from matplotlib import pyplot as plt
+import numpy as np
+head=fits.getheader('.')            ###文件地址
+data=fits.getdata('.')          ###文件地址
+print(head)
+
+f,axs=plt.subplots(1,2,figsize=(16,8))
+axs[0].imshow(data,vmin=300,vmax=600,origin='lower')
+axs[0].set_title(&quot;north down, east left&quot;)
+axs[1].imshow(np.flipud(data),vmin=300,vmax=600,origin='lower')
+axs[1].set_title(&quot;north up, east left&quot;)
+</code></pre>
+<p>II. 合成bias，获得super-bias</p>
+<pre><code class="language-python"># 读取bias图像
+import glob             ###好像是一类目录文件搜索包
+bfiles=glob.glob('.')           ###文件地址
+bfiles.sort()
+allbias=[]
+print(&quot;combining bias ...&quot;)
+
+# 合并
+for i,ifile in enumerate(bfiles):
+  print(&quot;reading bias:&quot;,i+1,len(bfiles),ifiles)
+  data=fits.getdata(ifile)
+  allbias.append(data)
+allbias=np.stack(allbias)           ###化二维为三位，再沿着序列轴合并
+print(allbias.shape)
+superbias=np.median(allbias,axis=0)         ###为什么是中值？
+fits.writeto('.',superbias.astype('float32'),overwrite=True) ###这一步 不太懂在干什么
+
+# 展示
+plt.figure(figsize=(8,8))
+plt.imshow(superbias,vmin=5,vmax=5,origin='lower')
+plt,colorbar()
+plt.title(&quot;super bias deriver from bias frame&quot;)
+</code></pre>
+<p><img src="/Users/makkonem/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/e66b4c65c6691729b7c3fa6ac5a3408e/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/Image/1831688115256_.pic.jpg" alt="1831688115256_.pic" style="zoom:70%;" /></p>
+<p>III. 合成dome flats</p>
+<pre><code class="language-python"># 读取flats图像
+ffiles=glob.glob('.')           ###文件地址
+ffiles.sort()
+allflat=[]
+print(&quot;combining dome flats ...&quot;)
+
+# 合并
+for i,ifile in enumerate(ffiles):
+  print(&quot;reading flat:&quot;,i+1,len(ffiles),ifiles)
+  data=fits.getdata(ifile)-superbias
+  mflat=np.median(data[1500-256:1500+256,1500-256:1500+256])
+  ###不知道在干什么
+  data/=mflat
+  print(&quot;median flat:&quot;,mflat)
+  allflat.append(data)
+allflat=np.stack(allflat)           ###化二维为三位，再沿着序列轴合并
+print(allflat.shape)
+domeflat=np.median(allflat,axis=0)
+fits.writeto('.',domeflat.astype('float32'),overwrite=True) 
+
+# 展示
+plt.figure(figsize=(8,8))
+plt.imshow(domeflat,origin='lower')
+plt,colorbar()
+plt.title(&quot;dome flat deriver from dome flats&quot;)
+</code></pre>
+<p><img src="/Users/makkonem/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/e66b4c65c6691729b7c3fa6ac5a3408e/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/Image/1821688115189_.pic.jpg" alt="1821688115189_.pic" style="zoom:50%;" /></p>
+<p>IV. gain and readout noise</p>
+<pre><code class="language-python"># calculate
+from astropy..stats import sigma_clipped_stats
+biasfile1='.'
+biasfile2='.'
+flatfile1='.'
+flatfile2='.'
+bias1=fits.getdata(biasfile1)[1500-256:1500+256,1500-256:1500+256]
+bias2=fits.getdata(biasfile2)[1500-256:1500+256,1500-256:1500+256]
+flat1=fits.getdata(flatfile1)[1500-256:1500+256,1500-256:1500+256]
+flat2=fits.getdata(flatfile2)[1500-256:1500+256,1500-256:1500+256]
+mean_bias1=np.median(bias1)
+mean_bias2=np.median(bias2)
+mean_flat1=np.median(flat1)
+mean_flat2=np.median(flat2)
+
+-,-,std_biasdiff=sigma_clipped_stats(bias1-bias2,sigma=4.0,maxiters=2)
+-,-,std_flatdiff=sigma_clipped_stats(flat1-flat2,sigma=4.0,maxiters=2)
+print(mean-bias1,mean_bias2,mean_flat1,std_biasdiff,std_flatdiff)
+gain=((mean_flat1+mean_flat2)-(mean_bias1+mean_bias2)/(std_flatdiff**2-std_biasdiff**2))
+rdnoise=gain*std_biasdiff/np.sqrt(2)
+print(&quot;gain:&quot;,gain,&quot;readout noise:&quot;,rdnoise)
+</code></pre>
+<p>V. 减去本底与平场，翻转图片</p>
+<pre><code class="language-python"># 添加keywords
+from astropy.coordinates import SkyCoord
+import astropy.unit as u
+import glob,os
+
+c=SkyCoord(&quot;.&quot;,&quot;.&quot;,frame='icrs',unit=(u.hourangle,u.degree))    ###填入赤经，赤纬
+ra=c.ra.degree;dec=c.dec.degree
+print(&quot;ra:&quot;,ra,&quot;dec:&quot;,e.dec.degree)
+epoch=2000.0
+pixscale=0.137
+
+outdir='.'
+sfiles=glob.glob(.)
+sfiles.sort()
+for i,ifile in enumerate(sfiles):
+  print(&quot;reducing (debias, flat-fielding, and flipping):&quot;)
+  indir,infile=os.path.split(ifile)
+  rootname,-=os.path.splitext(infile)
+  col_origin=head['CRVAL1']
+  row_origin=head['CRVAL2']
+  subflat=domeflat[row_origin:row_origin+512,col_origin:col_origin+512]
+  subbias=superbias[row_origin:row_origin+512,col_origin:col_origin+512]
+  if i==0:
+    fits.writeto('.',subflat.astype('float32'),overwrite=True)
+    fits.writeto('.',subbias.astype('float32'),overwrite=True)    
+data=fits.getdata(ifile)
+
+# 减去bias和flat-fielding
+data=(data-subbias)/subflat
+
+# 设置初始参考点 if doing astrometry
+head['epoch']=2000.0
+head['CRVAL1']=ra
+head['CRVAL2']=dec
+head['CRPIX1']=head['NAXIS1']/2.0
+head['CRPIX2']=head['NAXIS2']/2.0
+head['CDELT1']=-pixscale/3600.0
+head['CDELT2']=pixscale/3600.0
+head['CTYPE1']='RA---TAN'
+head['CTYPE2']='DEC--TAN'
+head['GAIN']=(gain,'GAIN in e-/ADU')
+head['RDNOISE']=(rdnoise,'readout noise in electron')
+print(&quot;writing to&quot;+outfile)
+fits.wirteto(outfile,np.flipud(data),header=head,overwrite=True,output_verify='silentfix')
+</code></pre>
+<p>An example for source detection and photometry</p>
+<p>I. Get sky mask</p>
+<pre><code class="language-python">import photutils as pht
+data=fits.getdata('.')
+# 了解关于天域的统计数据
+mean,median,std=sigma_clipped_stats(data,sigma=3.0)         ###sigma是什么？
+print((mean,median,std))
+
+f,axs=plt.subplot(1,2,figsize=(16,8))
+axs[0].imshow(data,vmin=300,vmax=600,origin='lower')
+axs[0].set_title(&quot;data&quot;)
+axs[1].imshow(mask,origin='lower')
+axs[1].set_title(&quot;mask&quot;)
+
+# 获得2D sky map
+from astropy.stats import SigmaClip
+sigma_clip = SigmaClip(sigma=3.)
+bkg_estimator = pht.SExtractorBackground()
+bkg=pht.Background2D(data,(64,64),mask=mask,filter_size=(3,3),sigma_clip=sigma_clip,bkg_estimator=bkg_estimator)
+print(bkg.background_median,bkg.background_rms_median)
+
+f,axs=plt.subplot(1,2,figsize=(16,8))
+axs[0].imshow(bkg.background,origin='lower')
+axs[0].set_title(&quot;background&quot;)
+axs[1].imshow(bkg.bakcground_rms,origin='lower')
+axs[1].set_title(&quot;background rms&quot;)
+</code></pre>
+<p><img src="/Users/makkonem/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/e66b4c65c6691729b7c3fa6ac5a3408e/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/Image/1781688103396_.pic.jpg" alt="1781688103396_.pic" style="zoom:50%;" /></p>
+<p>II. Source detection</p>
+<pre><code class="language-python"># find objects and calculate basic information
+daofind = pht.IRAFStarFinder(fwhm=3.0, threshold=5.*bkg.background_rms_median,exclude_border=True,sharplo=0.5,sharphi=2.0,roundlo=0.0,roundhi=0.7)
+sources=daofind(data-bkg.background_median)
+print(sources)
+print(sources.colnames)
+
+from photutils import CircularAperture
+positions=np.transpose((sources['xcentroid'],sources['ycentroid']))
+apertures=CircularAperture(positions,r=10.)
+plt.figure(figsize=(8,8))
+plt.imshow(data,cmap='Greys_r',origin='lower',vmin=300,vmax=600,interpolation='nearest')
+apertures.plot(color='red',lw=1.5,alpha=0.5)
+</code></pre>
+<p><img src="/Users/makkonem/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/e66b4c65c6691729b7c3fa6ac5a3408e/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/Image/1791688112991_.pic.jpg" alt="1791688112991_.pic" style="zoom:50%;" /></p>
+<p>III. Error estimation</p>
+<pre><code class="language-python">from photutils.unit import calc_total_error
+error=calc_total_error(data_bkg.background,bkg.banckground_rms,gain)
+print(np.median(error))
+</code></pre>
+<p>IV. Aperture photometry</p>
+<pre><code class="language-python"># 孔径测光
+from astropy.table import Table
+from astropy.table import table
+radii=[3,4,5,6,8,10,12,15,20,25]            ###孔径半价
+positions=(ix,iy) for ix,iy in zip(sources['xcentroid'],sources['ycentroid'])
+apertures=[pht.CircularAperture(positions,r=r) for r in radii]
+aper_phot=pht.aperture_photometry(data-bkg.background,apertures,error=error)
+print(aper_phot.colnames)
+
+# 将流量换算为星等（25等星为零点）
+for i in range(len(radii)):
+  fcol='aperture_sum_'+str(i)
+  ecol='aperture_sum_err_'+str(i)
+  flux=aper_phot[fcol]
+  fluxerr=aper_phot[ecol]
+  mag=-2.5*np.log10(lux)+25
+  magerr=2.5/(flux*np.log(10))*fluxerr
+  aper_phot[fcol]=mag
+  aper_phot[ecol]=magerr
+  aper_phot.rename_column(fcol,'mag_'+str(i))
+  aper_phot.rename_column(ecol,'magerr_'+str(i))
+</code></pre>
+<p>V. Display</p>
+<pre><code class="language-python">f,axs=plt.subplot(1,2,figsize=(16,8))
+data1=fits.getdata('.')
+data2=fits.getdata('.')
+axs[0].imshow(data1,vmin=300,vmax=600,origin='lower')
+axs[0].set_title(&quot;image 1&quot;)
+axs[1].imshow(data2,vmin=300,vmax=600,origin='lower')
+axs[1].set_title(&quot;image 2&quot;)
+</code></pre>
+<p><img src="/Users/makkonem/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/e66b4c65c6691729b7c3fa6ac5a3408e/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/Image/1801688114298_.pic.jpg" alt="1801688114298_.pic" style="zoom:50%;" /></p>
+<p>VI. Calculate average shifts between two different images</p>
+<pre><code class="language-python">cat1=Table.read('.')
+cat2=Table.read('.')
+x1=cat1['xcenter']
+y1=cat1['ycenter']
+x2=cat2['xcenter']
+y2=cat2['ycenter']
+ncat1=len(cat1)
+ncat2=len(cat2)
+XX=[]
+YY=[]
+for i in range(ncat2):
+  XX.extend((x1-x2[i]))
+  YY.extend((y1-y2[i]))
+XX=np.array(XX)
+YY=np.array(YY)
+xhist,xbins=np.histogram(XX,range=[-200,200],bins=401)
+yhist,ybins=np.histogram(YY,range=[-200,200],bins=401)              ###bin选取有一定技巧
+print(np.median(xhist),np.median(yhist))
+f,axs=plt.subplot(1,2,figsize=(16,8))
+axs[0].hist(XX,range=[-200,200],bins=401)
+axs[0].set_title(&quot;x shift&quot;)
+axs[1].hist(YY,range=[-200,200],bins=401)
+axs[1].set_title(&quot;y shift&quot;)
+</code></pre>
+<p><img src="/Users/makkonem/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/e66b4c65c6691729b7c3fa6ac5a3408e/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/Image/1811688114922_.pic.jpg" alt="1811688114922_.pic" style="zoom:50%;" /></p>
+<p>……</p>
+<h3 id="iv-astropy">IV. AstroPy基本使用</h3>
+<ol>
+<li>天文数据类型</li>
+</ol>
+<p>FITS文件：普适图像传输系统</p>
+<p>结构：HDU（header and data unit）</p>
+<p>头结构（header）：包含多个关键字即信息</p>
+<p>第一行：SIMPLE=T</p>
+<p>第二行：每一个像元用多少字节表示 BITPIX</p>
+<p>第三行：数据轴（n个轴） NAXIS</p>
+<p>第四行：NAXISn</p>
+<p>$N_{bits}=|BITPIX|\times(NAXIS_1\times...\times NAXIS_n)$</p>
+<p><em>例如</em></p>
+<p><img src="/Users/makkonem/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/e66b4c65c6691729b7c3fa6ac5a3408e/Message/MessageTemp/c196266f837d14e0b693f961bee37b66/Image/21689237153_.pic.jpg" alt="21689237153_.pic" style="zoom:50%;" /></p>
+<p><em>2维，每个轴14400个pixel，每个pixel占16bits</em></p>
+<p><em>时间格式：CCYY-MM-DD[Thh:mm:ss]</em></p>
+<p><strong>关键字总结：</strong></p>
+<p><img src="/Users/makkonem/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/e66b4c65c6691729b7c3fa6ac5a3408e/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/Image/2031689237903_.pic.jpg" alt="2031689237903_.pic" style="zoom:50%;" /></p>
+<ol>
+<li>AstroPy的实际操作</li>
+</ol>
+<p>一些基本功能：</p>
+<pre><code class="language-python">### 功能一：导入物理常量
+from astropy import constants as const
+help(const)         # 查询可提供的物理常量
+print(const.c)
+print(const.c.to('km/s'))
+
+### 功能二：单位转换
+from astropy import units as u
+F = (const.G * 3. * const.M_sun * 100 * u.kg) / (2.2 * u.au) ** 2
+print(F.to(u.N))            # 一个数字乘以一个单位
+
+yellow = 580 * u.nm
+yellow.to(u.terahertz,quivalencies=u.spectral())
+
+
+### 功能三：NDData &amp; Table 多维数据与表格处理
+from astropy.nddata import NDData
+from astropy.nddata import CCDData
+import numpy as np
+from matplotlib import pyplot as plt
+
+x=CCDData([[1,2,3][4,5,6]],unit='adu')
+np.asarray(x)
+plt.imshow(x)
+
+### 功能四：时间转化
+from astropy.time import Time
+times = ['2020-01-01T00:00:00.123456789','2021-01-01T00:00:00']
+t = Time(times,format='isot',scale='utc')           # 转译时间信息
+t2 = Times(now)
+t2.jd               # 儒略历
+t2.mjd          # 约化儒略历
+t2.fits         # 转化为fits文件可以储存的形式
+t2.ymdhms       # 拆分为元组
+
+### 功能五：天文空间坐标系
+from astropy import units as u
+from astropy.coordinates import SkyCoord
+from astropy.coordinates import EarthLocation
+from astropy.coordinates import AltAz
+
+# 织女星坐标，坐标格式可自己定义
+c = SkyCoord('18 36 56.19 +38 46 58.8',unit=(u.hourangle,u.deg))
+c.ra
+c.dec
+c.ra.hms
+c.dec.dms
+c.ra.deg
+c.ra.radian
+
+# 国台地球坐标，接下来进行地平坐标系到赤道坐标系的转化
+d = EarthLocation(lat='40d23m45.36s',lon='',height=900*u.m)
+observing_time = Times('2021-01-01T00:00:00',format='isot',scale='utc')
+aa=AltAz(location=d,obstime=observing_time)
+print(aa)
+c.transform_to(aa)          # 输出观测时应该观测的位置（地平坐标系）
+</code></pre>
+<p>​       关于Fits文件的功能：</p>
+<pre><code class="language-python">from astropy.io import fits
+# 读取头文件
+header = fits.getheader('data/hip.fits',1)
+# 读取信息
+data = fits.getdata('data/hip.fits',1)
+
+# 显示图像
+hdu_list = fits.open(image_file)
+hdu_list.info()
+image_data=hdu_list[0].data
+hdu_list.close
+plt.imshow(image_data,cmap='gray')
+plt.colorbar 
+</code></pre>
+<h3 id="v-python">V. 机器学习Python实践</h3>
+<ol>
+<li>机器学习Python库</li>
+</ol>
+<p>a. Scikit-Learn  </p>
+<p><a href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a> </p>
+<p><a href="https://github.com/scikit-learn/scikit-learn">https://github.com/scikit-learn/scikit-learn</a></p>
+<p>b. AstroML</p>
+<p><a href="https://www.astroml.org/index.html">https://www.astroml.org/index.html</a></p>
+<p><a href="https://github.com/astroML/astroML">https://github.com/astroML/astroML</a></p>
+<ol>
+<li>(监督）机器学习流程</li>
+</ol>
+<p>数据准备、特征工程、创建模型、模型训练、模型评估、模型部署</p>
+<ol>
+<li>数据准备</li>
+</ol>
+<p>数据预处理：处理缺失值、特征缩放、特征编码</p>
+<p>数据集划分：区分训练集与测试集</p>
+<h3 id="_1">实操：</h3>
+<pre><code class="language-python"># astropy测光实验
+from astropy.io import fits
+from astropy.nddata import CCDData
+from astropy.stats import sigma_clip
+import numpy as np
+import glob
+import matplotlib.pyplot as plt
+
+# generate super-bias
+bfiles = glob.glob('/Users/makkonem/Desktop/Innovation_project/Test/R16250*.fits')
+bfiles.sort()
+allbias=[]
+print(&quot;combining bias ...&quot;)
+
+for i,ifile in enumerate(bfiles):
+  print(&quot;reading bias:&quot;,i+1,len(bfiles),ifile)
+  data=fits.getdata(ifile)
+  allbias.append(data)
+allbias=np.stack(allbias)
+print(allbias.shape)
+
+superbias=np.mean(allbias,axis=0)
+fits.writeto('superbias.fit',superbias.astype('float32'),overwrite=True)
+
+plt.figure(figsize=(8,8))
+plt.imshow(superbias,vmin=5,vmax=5,origin='lower')
+plt.colorbar()
+plt.title(&quot;super bias deriver from bias frame&quot;)
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "toc.integrate", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../assets/javascripts/repo_last_updated.js"></script>
+      
+    
+  </body>
+</html>
