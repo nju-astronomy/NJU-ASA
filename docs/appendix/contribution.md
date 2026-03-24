@@ -117,9 +117,7 @@ docs/
 │   │   │       ├── cas.md            # 国家天文台
 │   │   │       └── other_camps.md    # 其他院校
 │   │   └── by_exam/                  # 考研
-│   │       ├── prepare_kaoyan.md     # 考研的准备
-│   │       ├── process_kaoyan.md     # 考研的流程
-│   │       └── others_kaoyan.md      # 其他
+│   │       ├── prepare_kaoyan.md     # 考研准备以及流程
 │   └── abroad/                       # 出国
 │       ├── abroad_overview.md        # 常见的出国路径概览
 │       ├── why_abroad.md             # 为什么出国？
