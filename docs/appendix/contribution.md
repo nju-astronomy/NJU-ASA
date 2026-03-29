@@ -27,7 +27,9 @@
 
 2. 点击文件右上角的编辑图标
 
-3. 修改内容后，点击「Commit changes」→ 勾选「Create a new branch for this commit」→ 提交
+3. 修改内容后，点击「Commit changes」→ 勾选「Create a new branch for this commit」→ 提交（右下角 pull request）
+
+---
 
 2.2、**上传新文件/资料**：
 
@@ -37,9 +39,11 @@
 
 3. 拖拽或选择文件上传
 
-4. 点击「Commit changes」→ 勾选「Create a new branch for this commit」→ 提交
+4. 点击「Commit changes」→ 勾选「Create a new branch for this commit」→ 提交（右下角 pull request）
 
 > 若上传课程资料，请统一存放至 `docs/appendix/courses/courses_files/` 目录，并在相应的 Markdown 文件中做好记录与说明
+
+---
 
 2.3、**创建新文件夹并上传**：
 
@@ -49,17 +53,22 @@
 
 3. 系统会自动创建对应的文件夹结构
 
-4. 上传完成后提交
+4. 上传完成后提交（右下角 pull request）
+
+---
 
 3、提交 Pull Request，**PR标题请注明署名方式**：
 - 匿名：自拟昵称，并标注年级与专业/方向（例: 2024级_天体生物学方向_匿名」），如果你想的话在[作者页面](../authors.md)添加你的联系方式。
 - 实名：真实姓名，附年级与专业/方向（例：张三_2024级_宇宙社会学方向」）
+
+---
 
 ### 方法二
 
 在 [GitHub Issues](https://github.com/nju-astronomy/NJU-ASA/issues) 上提交文件和相关内容，有维护者后续添加。
 
 ---
+
 ## 内容组织规范
 
 ### 目录结构
@@ -164,7 +173,7 @@ docs/
 若为“绩点有什么用？”小节分享你的回答，找到`docs/academics/gpa_goals.md`文件中记录说明：
 ```markdown
 
-你的回答你的回答你的回答你的回答你的回答你的回答你的回答你的回答你的回答（你的名字（实名或者匿名），你的方向，你的年级
+你的回答你的回答你的回答你的回答你的回答你的回答你的回答你的回答你的回答（你的名字（实名或者匿名），你的方向，你的年级）
 
 --- #下划线分割
 
