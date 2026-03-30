@@ -67,6 +67,7 @@
 - [就业](beyond_astro/careers.md)
 - [生活在南京](beyond_astro/living_nanjing.md)
 - [生活在南大](beyond_astro/living_nju.md)
+- [旅行在..](beyond_astro/travel_around.md)
 ## 树洞
 - [树洞：交流区](whatever.md)
 
