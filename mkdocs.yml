@@ -1,4 +1,5 @@
 site_name: NJU-ASA
+site_url: https://nju-astronomy.github.io/NJU-ASA/
 
 theme:
   name: material
